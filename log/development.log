@@ -1,0 +1,1701 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (136.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (144.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateEventos (20190612184233)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "eventos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "desc" varchar, "data" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190612184233_create_eventos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190612184233"]]
+  ↳ bin/rails:9
+  [1m[35m (151.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20190619165552)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "nome" varchar, "aniversario" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190619165552_devise_create_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20190619165552_devise_create_users.rb:41
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20190619165552_devise_create_users.rb:42
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190619165552"]]
+  ↳ bin/rails:9
+  [1m[35m (105.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-19 16:56:29.735369"], ["updated_at", "2019-06-19 16:56:29.735369"]]
+  ↳ bin/rails:9
+  [1m[35m (93.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (572.4ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (61.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:45:28.669916"], ["created_at", "2019-06-19 17:45:28.670883"], ["updated_at", "2019-06-19 17:45:28.670883"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (64.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:45:28.739037"], ["created_at", "2019-06-19 17:45:28.739596"], ["updated_at", "2019-06-19 17:45:28.739596"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (149.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.2ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:45:28.894866"], ["created_at", "2019-06-19 17:45:28.895758"], ["updated_at", "2019-06-19 17:45:28.895758"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (63.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:45:28.962282"], ["created_at", "2019-06-19 17:45:28.963471"], ["updated_at", "2019-06-19 17:45:28.963471"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (117.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.6ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:45:29.085111"], ["created_at", "2019-06-19 17:45:29.086412"], ["updated_at", "2019-06-19 17:45:29.086412"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (382.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.7ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:45:29.472881"], ["created_at", "2019-06-19 17:45:29.474196"], ["updated_at", "2019-06-19 17:45:29.474196"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (73.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:45:29.550757"], ["created_at", "2019-06-19 17:45:29.551331"], ["updated_at", "2019-06-19 17:45:29.551331"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (62.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:45:29.618195"], ["created_at", "2019-06-19 17:45:29.618833"], ["updated_at", "2019-06-19 17:45:29.618833"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (84.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:45:29.705668"], ["created_at", "2019-06-19 17:45:29.706262"], ["updated_at", "2019-06-19 17:45:29.706262"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (63.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:45:29.772555"], ["created_at", "2019-06-19 17:45:29.773113"], ["updated_at", "2019-06-19 17:45:29.773113"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (85.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (89.6ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (102.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:47:21.924804"], ["created_at", "2019-06-19 17:47:21.925905"], ["updated_at", "2019-06-19 17:47:21.925905"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (90.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:47:22.019594"], ["created_at", "2019-06-19 17:47:22.020172"], ["updated_at", "2019-06-19 17:47:22.020172"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (113.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.7ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:47:22.135254"], ["created_at", "2019-06-19 17:47:22.136312"], ["updated_at", "2019-06-19 17:47:22.136312"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (90.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:47:22.230511"], ["created_at", "2019-06-19 17:47:22.231899"], ["updated_at", "2019-06-19 17:47:22.231899"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (142.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:47:22.376075"], ["created_at", "2019-06-19 17:47:22.378153"], ["updated_at", "2019-06-19 17:47:22.378153"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (96.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:47:22.477157"], ["created_at", "2019-06-19 17:47:22.477746"], ["updated_at", "2019-06-19 17:47:22.477746"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (73.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.6ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:47:22.555509"], ["created_at", "2019-06-19 17:47:22.556116"], ["updated_at", "2019-06-19 17:47:22.556116"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (93.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:47:22.654485"], ["created_at", "2019-06-19 17:47:22.655093"], ["updated_at", "2019-06-19 17:47:22.655093"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (73.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:47:22.731427"], ["created_at", "2019-06-19 17:47:22.732069"], ["updated_at", "2019-06-19 17:47:22.732069"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (75.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:47:22.809461"], ["created_at", "2019-06-19 17:47:22.810092"], ["updated_at", "2019-06-19 17:47:22.810092"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (96.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leostein@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:27
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:47:34 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/leonardo/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  Rendered eventos/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 1716ms (Views: 1701.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:47:38 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  Rendered eventos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (112.3ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (156.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:48:01.149178"], ["created_at", "2019-06-19 17:48:01.150307"], ["updated_at", "2019-06-19 17:48:01.150307"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (106.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.0ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:48:01.259807"], ["created_at", "2019-06-19 17:48:01.260468"], ["updated_at", "2019-06-19 17:48:01.260468"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (83.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:48:01.346468"], ["created_at", "2019-06-19 17:48:01.347042"], ["updated_at", "2019-06-19 17:48:01.347042"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (110.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.8ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:48:01.462218"], ["created_at", "2019-06-19 17:48:01.463484"], ["updated_at", "2019-06-19 17:48:01.463484"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (113.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:48:01.580857"], ["created_at", "2019-06-19 17:48:01.581429"], ["updated_at", "2019-06-19 17:48:01.581429"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (118.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:48:01.703194"], ["created_at", "2019-06-19 17:48:01.703873"], ["updated_at", "2019-06-19 17:48:01.703873"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (108.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:48:01.814196"], ["created_at", "2019-06-19 17:48:01.814893"], ["updated_at", "2019-06-19 17:48:01.814893"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (97.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:48:01.915286"], ["created_at", "2019-06-19 17:48:01.915896"], ["updated_at", "2019-06-19 17:48:01.915896"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (99.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:48:02.018833"], ["created_at", "2019-06-19 17:48:02.019748"], ["updated_at", "2019-06-19 17:48:02.019748"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (92.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:48:02.114782"], ["created_at", "2019-06-19 17:48:02.115378"], ["updated_at", "2019-06-19 17:48:02.115378"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (101.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leostein@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:27
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:48:04 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  Rendered eventos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:48:05 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  Rendered eventos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:48:06 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  Rendered eventos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:49:12 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.4ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 50ms (Views: 46.7ms | ActiveRecord: 2.1ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (372.8ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (77.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-19 17:50:34.648613"], ["created_at", "2019-06-19 17:50:34.649438"], ["updated_at", "2019-06-19 17:50:34.649438"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (96.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:50:34.751716"], ["created_at", "2019-06-19 17:50:34.752840"], ["updated_at", "2019-06-19 17:50:34.752840"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (97.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.1ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-21 17:50:34.854089"], ["created_at", "2019-06-19 17:50:34.855041"], ["updated_at", "2019-06-19 17:50:34.855041"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (100.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.2ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-22 17:50:34.960049"], ["created_at", "2019-06-19 17:50:34.960627"], ["updated_at", "2019-06-19 17:50:34.960627"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (93.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-23 17:50:35.062277"], ["created_at", "2019-06-19 17:50:35.062958"], ["updated_at", "2019-06-19 17:50:35.062958"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (72.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-24 17:50:35.136809"], ["created_at", "2019-06-19 17:50:35.137408"], ["updated_at", "2019-06-19 17:50:35.137408"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (89.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-25 17:50:35.228382"], ["created_at", "2019-06-19 17:50:35.229195"], ["updated_at", "2019-06-19 17:50:35.229195"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (84.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-26 17:50:35.317061"], ["created_at", "2019-06-19 17:50:35.318083"], ["updated_at", "2019-06-19 17:50:35.318083"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (92.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-27 17:50:35.415122"], ["created_at", "2019-06-19 17:50:35.415707"], ["updated_at", "2019-06-19 17:50:35.415707"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (65.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-28 17:50:35.486795"], ["created_at", "2019-06-19 17:50:35.487457"], ["updated_at", "2019-06-19 17:50:35.487457"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (103.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leostein@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:27
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:50:38 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:50:49 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 74ms (Views: 72.3ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (113.0ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (98.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-19 17:52:03.027495"], ["created_at", "2019-06-19 17:52:03.028726"], ["updated_at", "2019-06-19 17:52:03.028726"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (75.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.8ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:52:03.107228"], ["created_at", "2019-06-19 17:52:03.107894"], ["updated_at", "2019-06-19 17:52:03.107894"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (108.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-21 17:52:03.218482"], ["created_at", "2019-06-19 17:52:03.219045"], ["updated_at", "2019-06-19 17:52:03.219045"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (84.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.6ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-22 17:52:03.306368"], ["created_at", "2019-06-19 17:52:03.307365"], ["updated_at", "2019-06-19 17:52:03.307365"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (93.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-23 17:52:03.406259"], ["created_at", "2019-06-19 17:52:03.406817"], ["updated_at", "2019-06-19 17:52:03.406817"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (116.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.6ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-24 17:52:03.529282"], ["created_at", "2019-06-19 17:52:03.529911"], ["updated_at", "2019-06-19 17:52:03.529911"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (119.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-25 17:52:03.651666"], ["created_at", "2019-06-19 17:52:03.652231"], ["updated_at", "2019-06-19 17:52:03.652231"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (108.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (3.0ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-26 17:52:03.762762"], ["created_at", "2019-06-19 17:52:03.763345"], ["updated_at", "2019-06-19 17:52:03.763345"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (96.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (2.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-27 17:52:03.866983"], ["created_at", "2019-06-19 17:52:03.868210"], ["updated_at", "2019-06-19 17:52:03.868210"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (100.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-28 17:52:03.974148"], ["created_at", "2019-06-19 17:52:03.974741"], ["updated_at", "2019-06-19 17:52:03.974741"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (96.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leostein@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:27
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:52:05 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (2.5ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 41ms (Views: 35.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:52:06 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:52:07 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:52:07 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:52:07 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (119.4ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (97.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-19 17:54:00.034140"], ["created_at", "2019-06-19 17:54:00.034984"], ["updated_at", "2019-06-19 17:54:00.034984"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (104.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.8ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:54:00.142129"], ["created_at", "2019-06-19 17:54:00.143450"], ["updated_at", "2019-06-19 17:54:00.143450"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (101.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-21 17:54:00.249737"], ["created_at", "2019-06-19 17:54:00.250297"], ["updated_at", "2019-06-19 17:54:00.250297"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (95.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.8ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-22 17:54:00.349894"], ["created_at", "2019-06-19 17:54:00.351114"], ["updated_at", "2019-06-19 17:54:00.351114"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (65.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.1ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-23 17:54:00.424346"], ["created_at", "2019-06-19 17:54:00.424946"], ["updated_at", "2019-06-19 17:54:00.424946"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (98.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.6ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-24 17:54:00.529994"], ["created_at", "2019-06-19 17:54:00.531108"], ["updated_at", "2019-06-19 17:54:00.531108"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (81.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-25 17:54:00.615591"], ["created_at", "2019-06-19 17:54:00.616393"], ["updated_at", "2019-06-19 17:54:00.616393"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (108.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.7ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-26 17:54:00.726882"], ["created_at", "2019-06-19 17:54:00.727938"], ["updated_at", "2019-06-19 17:54:00.727938"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (96.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-27 17:54:00.826409"], ["created_at", "2019-06-19 17:54:00.827073"], ["updated_at", "2019-06-19 17:54:00.827073"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (97.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.8ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-28 17:54:00.926719"], ["created_at", "2019-06-19 17:54:00.927286"], ["updated_at", "2019-06-19 17:54:00.927286"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (98.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leostein@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:27
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:54:03 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:54:03 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.4ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 39ms (Views: 35.1ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (644.4ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (75.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (2.2ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-19 17:59:23.352933"], ["created_at", "2019-06-19 17:59:23.353919"], ["updated_at", "2019-06-19 17:59:23.353919"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (97.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.7ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 17:59:23.456123"], ["created_at", "2019-06-19 17:59:23.457680"], ["updated_at", "2019-06-19 17:59:23.457680"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (112.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-21 17:59:23.574323"], ["created_at", "2019-06-19 17:59:23.575642"], ["updated_at", "2019-06-19 17:59:23.575642"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (102.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (2.0ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-22 17:59:23.681861"], ["created_at", "2019-06-19 17:59:23.682897"], ["updated_at", "2019-06-19 17:59:23.682897"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (105.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.2ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-23 17:59:23.792806"], ["created_at", "2019-06-19 17:59:23.794073"], ["updated_at", "2019-06-19 17:59:23.794073"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (96.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-24 17:59:23.895247"], ["created_at", "2019-06-19 17:59:23.896497"], ["updated_at", "2019-06-19 17:59:23.896497"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (100.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-25 17:59:24.001035"], ["created_at", "2019-06-19 17:59:24.001914"], ["updated_at", "2019-06-19 17:59:24.001914"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (99.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-26 17:59:24.103405"], ["created_at", "2019-06-19 17:59:24.103999"], ["updated_at", "2019-06-19 17:59:24.103999"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (120.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.6ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-27 17:59:24.228484"], ["created_at", "2019-06-19 17:59:24.229495"], ["updated_at", "2019-06-19 17:59:24.229495"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (92.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (2.6ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-28 17:59:24.325321"], ["created_at", "2019-06-19 17:59:24.326796"], ["updated_at", "2019-06-19 17:59:24.326796"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (94.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leostein@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "leostein@gmail.com"], ["encrypted_password", "$2a$11$IGb/74He6soRtY8K2pqO5.wMOtUFp7yLlBoWV0IoZud6/htlY/AIu"], ["nome", "Leonardo Stein"], ["aniversario", "1999-11-25"], ["created_at", "2019-06-19 17:59:24.664532"], ["updated_at", "2019-06-19 17:59:24.664532"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (84.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+Started GET "/eventos/index" for ::1 at 2019-06-19 14:59:27 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (367.7ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (74.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-19 18:00:30.960411"], ["created_at", "2019-06-19 18:00:30.961331"], ["updated_at", "2019-06-19 18:00:30.961331"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (96.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (5.0ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 18:00:31.060159"], ["created_at", "2019-06-19 18:00:31.060763"], ["updated_at", "2019-06-19 18:00:31.060763"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (105.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (2.1ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-21 18:00:31.173751"], ["created_at", "2019-06-19 18:00:31.174355"], ["updated_at", "2019-06-19 18:00:31.174355"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (103.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (3.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-22 18:00:31.282261"], ["created_at", "2019-06-19 18:00:31.282851"], ["updated_at", "2019-06-19 18:00:31.282851"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (103.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-23 18:00:31.393710"], ["created_at", "2019-06-19 18:00:31.394386"], ["updated_at", "2019-06-19 18:00:31.394386"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (102.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-24 18:00:31.498663"], ["created_at", "2019-06-19 18:00:31.499723"], ["updated_at", "2019-06-19 18:00:31.499723"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (102.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-25 18:00:31.606166"], ["created_at", "2019-06-19 18:00:31.606711"], ["updated_at", "2019-06-19 18:00:31.606711"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (72.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (2.2ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-26 18:00:31.682341"], ["created_at", "2019-06-19 18:00:31.683619"], ["updated_at", "2019-06-19 18:00:31.683619"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (93.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-27 18:00:31.782392"], ["created_at", "2019-06-19 18:00:31.783593"], ["updated_at", "2019-06-19 18:00:31.783593"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (73.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-28 18:00:31.860930"], ["created_at", "2019-06-19 18:00:31.861553"], ["updated_at", "2019-06-19 18:00:31.861553"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (106.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leostein@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "leostein@gmail.com"], ["encrypted_password", "$2a$11$EwUW1LsK0M./QW/BTourCuL/V2dgQ26w4tEtu94D0iSx.9I/afzRW"], ["nome", "Leonardo Stein"], ["aniversario", "1999-11-25"], ["created_at", "2019-06-19 18:00:32.210112"], ["updated_at", "2019-06-19 18:00:32.210112"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (79.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "encrypted_password" = ?, "nome" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["encrypted_password", "$2a$11$DruCceSgv8MU00hU4gTxdOsqnn.fzav6WIKRoHkL6mpMQkxZangLO"], ["nome", "Leonardo Nozaki"], ["updated_at", "2019-06-19 18:00:32.517033"], ["id", 2]]
+  ↳ db/seeds.rb:31
+  [1m[35m (110.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:31
+Started GET "/eventos/index" for ::1 at 2019-06-19 15:00:32 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 31ms (Views: 28.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (155.0ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (86.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-19 18:01:52.629116"], ["created_at", "2019-06-19 18:01:52.630225"], ["updated_at", "2019-06-19 18:01:52.630225"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (97.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 18:01:52.730687"], ["created_at", "2019-06-19 18:01:52.731531"], ["updated_at", "2019-06-19 18:01:52.731531"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (95.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-21 18:01:52.830191"], ["created_at", "2019-06-19 18:01:52.831154"], ["updated_at", "2019-06-19 18:01:52.831154"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (96.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-22 18:01:52.929873"], ["created_at", "2019-06-19 18:01:52.931209"], ["updated_at", "2019-06-19 18:01:52.931209"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (98.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (2.7ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-23 18:01:53.031971"], ["created_at", "2019-06-19 18:01:53.032700"], ["updated_at", "2019-06-19 18:01:53.032700"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (103.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-24 18:01:53.141151"], ["created_at", "2019-06-19 18:01:53.141800"], ["updated_at", "2019-06-19 18:01:53.141800"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (105.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.2ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-25 18:01:53.252033"], ["created_at", "2019-06-19 18:01:53.253164"], ["updated_at", "2019-06-19 18:01:53.253164"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (61.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-26 18:01:53.318790"], ["created_at", "2019-06-19 18:01:53.319412"], ["updated_at", "2019-06-19 18:01:53.319412"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (86.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-27 18:01:53.407940"], ["created_at", "2019-06-19 18:01:53.408765"], ["updated_at", "2019-06-19 18:01:53.408765"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (62.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-28 18:01:53.474847"], ["created_at", "2019-06-19 18:01:53.475494"], ["updated_at", "2019-06-19 18:01:53.475494"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (84.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leostein@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "leostein@gmail.com"], ["encrypted_password", "$2a$11$yu2u2PHMZRhQt5ICYINzSOe3nWZfxDDSCiZDtRccN2nHhNNnlbs0S"], ["nome", "Leonardo Stein"], ["aniversario", "1999-11-25"], ["created_at", "2019-06-19 18:01:53.796923"], ["updated_at", "2019-06-19 18:01:53.796923"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (63.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nozaki@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "nozaki@gmail.com"], ["encrypted_password", "$2a$11$7n7elajEIILdVgjqjhK1guEfg2Tg7msQWcL3pBjPLHUUVVcwN8xK."], ["nome", "Leonardo Nozaki"], ["created_at", "2019-06-19 18:01:54.082663"], ["updated_at", "2019-06-19 18:01:54.082663"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (65.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:32
+Started GET "/eventos/index" for ::1 at 2019-06-19 15:01:55 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.3ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 15:02:10 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (101.9ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (75.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.0ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-19 18:24:57.795809"], ["created_at", "2019-06-19 18:24:57.797231"], ["updated_at", "2019-06-19 18:24:57.797231"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (104.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 18:24:57.905103"], ["created_at", "2019-06-19 18:24:57.905779"], ["updated_at", "2019-06-19 18:24:57.905779"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (94.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-21 18:24:58.003142"], ["created_at", "2019-06-19 18:24:58.003773"], ["updated_at", "2019-06-19 18:24:58.003773"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (117.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-22 18:24:58.126654"], ["created_at", "2019-06-19 18:24:58.127215"], ["updated_at", "2019-06-19 18:24:58.127215"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (98.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.6ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-23 18:24:58.228624"], ["created_at", "2019-06-19 18:24:58.229783"], ["updated_at", "2019-06-19 18:24:58.229783"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (97.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-24 18:24:58.329374"], ["created_at", "2019-06-19 18:24:58.330058"], ["updated_at", "2019-06-19 18:24:58.330058"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (81.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-25 18:24:58.414812"], ["created_at", "2019-06-19 18:24:58.415396"], ["updated_at", "2019-06-19 18:24:58.415396"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (103.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-26 18:24:58.521137"], ["created_at", "2019-06-19 18:24:58.522528"], ["updated_at", "2019-06-19 18:24:58.522528"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (74.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-27 18:24:58.602407"], ["created_at", "2019-06-19 18:24:58.602973"], ["updated_at", "2019-06-19 18:24:58.602973"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (103.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-28 18:24:58.708222"], ["created_at", "2019-06-19 18:24:58.708806"], ["updated_at", "2019-06-19 18:24:58.708806"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (108.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leostein@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "leostein@gmail.com"], ["encrypted_password", "$2a$11$uFOBpXEM9cBbQiGNRwyOmeLQGCmnXVnUzBluAFRLfQSrXBU8m9tYO"], ["nome", "Leonardo Stein"], ["aniversario", "1999-11-25"], ["created_at", "2019-06-19 18:24:59.056110"], ["updated_at", "2019-06-19 18:24:59.056110"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (82.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nozaki@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "nozaki@gmail.com"], ["encrypted_password", "$2a$11$6yyBNhLTAXRjBuWnMIeaR.xWjN71FcRWLIa5UUS0IxdZQDrKzjqSy"], ["nome", "Leonardo Nozaki"], ["aniversario", "1998-02-02"], ["created_at", "2019-06-19 18:24:59.358495"], ["updated_at", "2019-06-19 18:24:59.358495"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (78.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sososilvei@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:39
+Started GET "/eventos/index" for ::1 at 2019-06-19 15:25:02 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.3ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 62ms (Views: 57.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 15:25:03 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 15:25:04 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 15:25:04 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (468.2ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (78.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.8ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-19 18:25:20.651535"], ["created_at", "2019-06-19 18:25:20.652588"], ["updated_at", "2019-06-19 18:25:20.652588"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (316.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 18:25:20.973340"], ["created_at", "2019-06-19 18:25:20.974736"], ["updated_at", "2019-06-19 18:25:20.974736"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (76.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.7ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-21 18:25:21.053934"], ["created_at", "2019-06-19 18:25:21.059760"], ["updated_at", "2019-06-19 18:25:21.059760"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (98.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.2ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-22 18:25:21.163871"], ["created_at", "2019-06-19 18:25:21.165236"], ["updated_at", "2019-06-19 18:25:21.165236"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (73.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.0ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-23 18:25:21.241874"], ["created_at", "2019-06-19 18:25:21.242762"], ["updated_at", "2019-06-19 18:25:21.242762"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (116.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (2.1ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-24 18:25:21.362316"], ["created_at", "2019-06-19 18:25:21.362926"], ["updated_at", "2019-06-19 18:25:21.362926"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (75.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-25 18:25:21.443865"], ["created_at", "2019-06-19 18:25:21.444656"], ["updated_at", "2019-06-19 18:25:21.444656"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (91.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-26 18:25:21.538540"], ["created_at", "2019-06-19 18:25:21.539199"], ["updated_at", "2019-06-19 18:25:21.539199"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (70.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-27 18:25:21.617153"], ["created_at", "2019-06-19 18:25:21.619710"], ["updated_at", "2019-06-19 18:25:21.619710"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (98.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-28 18:25:21.722108"], ["created_at", "2019-06-19 18:25:21.723529"], ["updated_at", "2019-06-19 18:25:21.723529"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (67.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leostein@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "leostein@gmail.com"], ["encrypted_password", "$2a$11$c70H3BYo8y0GoPJ7flSPV.BacgA80kDdR40A/1j10ixVpN3.tZLva"], ["nome", "Leonardo Stein"], ["aniversario", "1999-11-25"], ["created_at", "2019-06-19 18:25:22.028924"], ["updated_at", "2019-06-19 18:25:22.028924"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (77.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nozaki@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "nozaki@gmail.com"], ["encrypted_password", "$2a$11$n76NXUkCo.oNO6YGnTtXIuRBvam4TqfVolSG3k7.jP2xqWrAnx1Zu"], ["nome", "Leonardo Nozaki"], ["aniversario", "1998-02-02"], ["created_at", "2019-06-19 18:25:22.323719"], ["updated_at", "2019-06-19 18:25:22.323719"]]
+  ↳ db/seeds.rb:32
+Started GET "/eventos/index" for ::1 at 2019-06-19 15:25:22 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[35m (104.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mEvento Load (35.9ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 78ms (Views: 40.9ms | ActiveRecord: 36.1ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sososilvei@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "sososilvei@hotmail.com"], ["encrypted_password", "$2a$11$rUvrWIb/9TUjcxHbQypHluVzZGJULIsUcF22x.XNqvODiClNKw8.q"], ["nome", "Sofia Silveira"], ["aniversario", "1997-08-18"], ["created_at", "2019-06-19 18:25:22.670633"], ["updated_at", "2019-06-19 18:25:22.670633"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (89.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+Started GET "/eventos/index" for ::1 at 2019-06-19 15:25:24 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.4ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 15:25:25 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 15:26:27 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/eventos/index" for ::1 at 2019-06-19 15:26:28 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (88.8ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (111.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-19 18:26:32.853969"], ["created_at", "2019-06-19 18:26:32.854808"], ["updated_at", "2019-06-19 18:26:32.854808"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (74.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 18:26:32.934353"], ["created_at", "2019-06-19 18:26:32.935433"], ["updated_at", "2019-06-19 18:26:32.935433"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (96.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-21 18:26:33.036920"], ["created_at", "2019-06-19 18:26:33.037485"], ["updated_at", "2019-06-19 18:26:33.037485"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (94.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-22 18:26:33.134300"], ["created_at", "2019-06-19 18:26:33.134879"], ["updated_at", "2019-06-19 18:26:33.134879"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (75.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.1ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-23 18:26:33.212780"], ["created_at", "2019-06-19 18:26:33.214517"], ["updated_at", "2019-06-19 18:26:33.214517"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (93.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.7ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-24 18:26:33.312557"], ["created_at", "2019-06-19 18:26:33.313870"], ["updated_at", "2019-06-19 18:26:33.313870"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (72.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-25 18:26:33.390460"], ["created_at", "2019-06-19 18:26:33.391349"], ["updated_at", "2019-06-19 18:26:33.391349"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (97.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.1ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-26 18:26:33.490550"], ["created_at", "2019-06-19 18:26:33.491133"], ["updated_at", "2019-06-19 18:26:33.491133"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (70.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (5.1ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-27 18:26:33.565628"], ["created_at", "2019-06-19 18:26:33.566242"], ["updated_at", "2019-06-19 18:26:33.566242"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (92.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-28 18:26:33.665562"], ["created_at", "2019-06-19 18:26:33.666195"], ["updated_at", "2019-06-19 18:26:33.666195"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (85.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leostein@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "leostein@gmail.com"], ["encrypted_password", "$2a$11$dsCxgawsYOaCuY3EWfOPtOSSFADplkI0VKf0QkEWgKYTZxq8a6vrq"], ["nome", "Leonardo Stein"], ["aniversario", "1999-11-25"], ["created_at", "2019-06-19 18:26:33.996187"], ["updated_at", "2019-06-19 18:26:33.996187"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (91.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nozaki@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "nozaki@gmail.com"], ["encrypted_password", "$2a$11$5KWfseJKYQkwFUvMqg4LR.hwsvwEgtGXHtJ2qpHjUKRRRv7/avhti"], ["nome", "Leonardo Nozaki"], ["aniversario", "1998-02-02"], ["created_at", "2019-06-19 18:26:34.310604"], ["updated_at", "2019-06-19 18:26:34.310604"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (133.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sososilvei@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:39
+Started GET "/eventos/index" for ::1 at 2019-06-19 15:26:35 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (133.3ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (98.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-19 18:28:33.748210"], ["created_at", "2019-06-19 18:28:33.749847"], ["updated_at", "2019-06-19 18:28:33.749847"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (98.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 18:28:33.851369"], ["created_at", "2019-06-19 18:28:33.852108"], ["updated_at", "2019-06-19 18:28:33.852108"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (73.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-21 18:28:33.928873"], ["created_at", "2019-06-19 18:28:33.929428"], ["updated_at", "2019-06-19 18:28:33.929428"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (101.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-22 18:28:34.033660"], ["created_at", "2019-06-19 18:28:34.034811"], ["updated_at", "2019-06-19 18:28:34.034811"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (69.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.1ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-23 18:28:34.108198"], ["created_at", "2019-06-19 18:28:34.108757"], ["updated_at", "2019-06-19 18:28:34.108757"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (95.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-24 18:28:34.207903"], ["created_at", "2019-06-19 18:28:34.209152"], ["updated_at", "2019-06-19 18:28:34.209152"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (95.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-25 18:28:34.307564"], ["created_at", "2019-06-19 18:28:34.308140"], ["updated_at", "2019-06-19 18:28:34.308140"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (73.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-26 18:28:34.385362"], ["created_at", "2019-06-19 18:28:34.385968"], ["updated_at", "2019-06-19 18:28:34.385968"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (96.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-27 18:28:34.484398"], ["created_at", "2019-06-19 18:28:34.485072"], ["updated_at", "2019-06-19 18:28:34.485072"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (60.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.8ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-28 18:28:34.550131"], ["created_at", "2019-06-19 18:28:34.551004"], ["updated_at", "2019-06-19 18:28:34.551004"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (62.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leocampelo16@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "leocampelo16@gmail.com"], ["encrypted_password", "$2a$11$ypIj4KzaCMoe9kAOmW0W3OrQrO0QrgyQp9tI2WCgdjf5Hv0c6if66"], ["nome", "Leonardo Stein"], ["aniversario", "1999-11-25"], ["created_at", "2019-06-19 18:28:34.860297"], ["updated_at", "2019-06-19 18:28:34.860297"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (77.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leosnozaki@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "leosnozaki@gmail.com"], ["encrypted_password", "$2a$11$vmX32Bx.omFCQiwAvXkaHuIivMKEIXefcJNzKgypRKwrj.u/gyl9O"], ["nome", "Leonardo Nozaki"], ["aniversario", "1998-02-02"], ["created_at", "2019-06-19 18:28:35.163492"], ["updated_at", "2019-06-19 18:28:35.163492"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (85.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sososilvei@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "sososilvei@hotmail.com"], ["encrypted_password", "$2a$11$zRAY5yr81N46Q0osXe5qjuMo74Y0dx4JtL8NkQLL3sGZZtNPEfcUq"], ["nome", "Sofia Silveira"], ["aniversario", "1997-08-18"], ["created_at", "2019-06-19 18:28:35.477060"], ["updated_at", "2019-06-19 18:28:35.477060"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (80.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["encrypted_password", "$2a$11$kQP1mes2dewtKRI7RrrtcOMLNyx/HOqHTUsQqoJ8Mb0OBftRriSgy"], ["nome", "Lucas Penteado"], ["aniversario", "1996-01-16"], ["created_at", "2019-06-19 18:28:35.781011"], ["updated_at", "2019-06-19 18:28:35.781011"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (67.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+Started GET "/eventos/index" for ::1 at 2019-06-19 15:28:37 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (1.5ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/eventos/index.html.erb:7
+  Rendered eventos/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 1.7ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE DATABASE "development" ENCODING = 'unicode'[0m
+  ↳ bin/rake:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE "test" ENCODING = 'unicode'[0m
+  ↳ bin/rake:9
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "eventos" CASCADE[0m
+  ↳ db/schema.rb:15
+  [1m[35m (115.6ms)[0m  [1m[35mCREATE TABLE "eventos" ("id" bigserial primary key, "nome" character varying, "desc" character varying, "data" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:23
+  [1m[35m (161.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "nome" character varying, "aniversario" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:23
+  [1m[35m (61.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:23
+  [1m[35m (61.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/schema.rb:23
+  [1m[35m (97.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (21.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190619165552)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (10.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190612184233);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (96.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (10.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-20 21:26:06.996090"], ["updated_at", "2019-06-20 21:26:06.996090"]]
+  ↳ db/schema.rb:13
+  [1m[35m (20.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rake:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rake:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rake:9
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "eventos" CASCADE[0m
+  ↳ db/schema.rb:15
+  [1m[35m (116.3ms)[0m  [1m[35mCREATE TABLE "eventos" ("id" bigserial primary key, "nome" character varying, "desc" character varying, "data" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:23
+  [1m[35m (118.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "nome" character varying, "aniversario" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:23
+  [1m[35m (69.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:23
+  [1m[35m (74.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/schema.rb:23
+  [1m[35m (131.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190619165552)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (10.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190612184233);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (109.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-20 21:26:07.747237"], ["updated_at", "2019-06-20 21:26:07.747237"]]
+  ↳ db/schema.rb:13
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rake:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rake:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-20 21:26:07.758056"], ["key", "environment"]]
+  ↳ bin/rake:9
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rake:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:9
+  [1m[36mEvento Destroy (1.2ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (1.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.0ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 21:26:07.842811"], ["created_at", "2019-06-20 21:26:07.843904"], ["updated_at", "2019-06-20 21:26:07.843904"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (18.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-21 21:26:07.865763"], ["created_at", "2019-06-20 21:26:07.867289"], ["updated_at", "2019-06-20 21:26:07.867289"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.0ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-22 21:26:07.876861"], ["created_at", "2019-06-20 21:26:07.879071"], ["updated_at", "2019-06-20 21:26:07.879071"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.8ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-23 21:26:07.887923"], ["created_at", "2019-06-20 21:26:07.889286"], ["updated_at", "2019-06-20 21:26:07.889286"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.6ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-24 21:26:07.898872"], ["created_at", "2019-06-20 21:26:07.900172"], ["updated_at", "2019-06-20 21:26:07.900172"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.7ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-25 21:26:07.909602"], ["created_at", "2019-06-20 21:26:07.911483"], ["updated_at", "2019-06-20 21:26:07.911483"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.6ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-26 21:26:07.920608"], ["created_at", "2019-06-20 21:26:07.921859"], ["updated_at", "2019-06-20 21:26:07.921859"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.8ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-27 21:26:07.932224"], ["created_at", "2019-06-20 21:26:07.933514"], ["updated_at", "2019-06-20 21:26:07.933514"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-28 21:26:07.943562"], ["created_at", "2019-06-20 21:26:07.944588"], ["updated_at", "2019-06-20 21:26:07.944588"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-29 21:26:07.954044"], ["created_at", "2019-06-20 21:26:07.954834"], ["updated_at", "2019-06-20 21:26:07.954834"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leocampelo16@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "leocampelo16@gmail.com"], ["encrypted_password", "$2a$11$rPukBOWKZnbRNH98byaCJuMuEu3EXcbEpstCHCaP4wCY/f/EsVcp2"], ["nome", "Leonardo Stein"], ["aniversario", "1999-11-25"], ["created_at", "2019-06-20 21:26:08.253747"], ["updated_at", "2019-06-20 21:26:08.253747"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (31.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leosnozaki@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "leosnozaki@gmail.com"], ["encrypted_password", "$2a$11$ZuKFcjOa3UxCEzJCBcz6nesi9o4LEhuwV/C3BGsf83anXzvR0v95m"], ["nome", "Leonardo Nozaki"], ["aniversario", "1998-02-02"], ["created_at", "2019-06-20 21:26:08.514243"], ["updated_at", "2019-06-20 21:26:08.514243"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sososilvei@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "sososilvei@hotmail.com"], ["encrypted_password", "$2a$11$MCOlfpFEyhiPtkceoUBgk.46QJYQtmlF.dJ5XDUlYCsiFNIeMCTbq"], ["nome", "Sofia Silveira"], ["aniversario", "1997-08-18"], ["created_at", "2019-06-20 21:26:08.763870"], ["updated_at", "2019-06-20 21:26:08.763870"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (21.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:46
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["encrypted_password", "$2a$11$NUhMo/Fj2hnGLHJxsHG0g.mnxvqq0u7TRiXrDLTnIJWPOV1.Wv37a"], ["nome", "Lucas Penteado"], ["aniversario", "1996-01-16"], ["created_at", "2019-06-20 21:26:09.009382"], ["updated_at", "2019-06-20 21:26:09.009382"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (20.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770)[0m
+  ↳ bin/rake:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rake:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rake:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rake:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  ↳ bin/rake:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (21.2ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (9.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-20 21:28:59.564586"], ["created_at", "2019-06-20 21:28:59.565970"], ["updated_at", "2019-06-20 21:28:59.565970"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (10.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.6ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-21 21:28:59.579446"], ["created_at", "2019-06-20 21:28:59.580252"], ["updated_at", "2019-06-20 21:28:59.580252"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.6ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-22 21:28:59.590865"], ["created_at", "2019-06-20 21:28:59.591989"], ["updated_at", "2019-06-20 21:28:59.591989"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.7ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-23 21:28:59.602090"], ["created_at", "2019-06-20 21:28:59.603538"], ["updated_at", "2019-06-20 21:28:59.603538"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-24 21:28:59.612854"], ["created_at", "2019-06-20 21:28:59.613730"], ["updated_at", "2019-06-20 21:28:59.613730"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.9ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-25 21:28:59.624061"], ["created_at", "2019-06-20 21:28:59.625255"], ["updated_at", "2019-06-20 21:28:59.625255"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.1ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-26 21:28:59.635474"], ["created_at", "2019-06-20 21:28:59.636998"], ["updated_at", "2019-06-20 21:28:59.636998"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.0ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-27 21:28:59.646614"], ["created_at", "2019-06-20 21:28:59.647968"], ["updated_at", "2019-06-20 21:28:59.647968"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.1ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-28 21:28:59.657793"], ["created_at", "2019-06-20 21:28:59.659328"], ["updated_at", "2019-06-20 21:28:59.659328"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (1.0ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-29 21:28:59.668671"], ["created_at", "2019-06-20 21:28:59.669886"], ["updated_at", "2019-06-20 21:28:59.669886"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leocampelo16@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "leocampelo16@gmail.com"], ["encrypted_password", "$2a$11$nMOfJFs1tOrxrAE7GbVEROiBHz7dzmokwG0bpJ/bTKkoFWrDfG7Jq"], ["nome", "Leonardo Stein"], ["aniversario", "1999-11-25"], ["created_at", "2019-06-20 21:28:59.935081"], ["updated_at", "2019-06-20 21:28:59.935081"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leosnozaki@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "leosnozaki@gmail.com"], ["encrypted_password", "$2a$11$a0jDvSfciFrF10YKHs8jZ.Pz.aH989enniu66BBqJn3UU5gSN7JMG"], ["nome", "Leonardo Nozaki"], ["aniversario", "1998-02-02"], ["created_at", "2019-06-20 21:29:00.173889"], ["updated_at", "2019-06-20 21:29:00.173889"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (14.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sososilvei@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "sososilvei@hotmail.com"], ["encrypted_password", "$2a$11$sCOjTcELJhaNTBQp6HfZNelM2hyUxP8JUDaV3kxD/oj.uqMmUnuzm"], ["nome", "Sofia Silveira"], ["aniversario", "1997-08-18"], ["created_at", "2019-06-20 21:29:00.419079"], ["updated_at", "2019-06-20 21:29:00.419079"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (13.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:46
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["encrypted_password", "$2a$11$qrFQFcnT/drSMGE3Vl2RfuLdksUOcx92W3Pjx7LiafJwwbWCGot.2"], ["nome", "Lucas Penteado"], ["aniversario", "1996-01-16"], ["created_at", "2019-06-20 21:29:00.652070"], ["updated_at", "2019-06-20 21:29:00.652070"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (14.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:46
+Started GET "/" for ::1 at 2019-06-20 18:34:49 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/leonardo/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/leonardo/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/leonardo/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
+Completed 200 OK in 34ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+

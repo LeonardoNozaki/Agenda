@@ -1,0 +1,11 @@
+<h1><%= @var.length %> eventos registrados</h1>
+
+<%@var.each do |thing| %>
+  <ul><%= thing.data %></ul>
+<% end %>
+
+<h1><%= @var1.length %> users registrados</h1>
+
+<%@var1.each do |thing| %>
+  <ul><%= thing.nome %></ul>
+<% end %>
