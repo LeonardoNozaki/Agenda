@@ -61,6 +61,8 @@ GEM
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
     builder (3.2.3)
+    bundle (0.0.1)
+      bundler
     byebug (11.0.1)
     capybara (3.23.0)
       addressable
@@ -266,6 +268,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.3.1)
+  bundle
   byebug
   capybara (>= 2.15)
   chromedriver-helper
