@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :aniversario, presence: true
+
+  has_many :events #user tem muitos eventos
 end
