@@ -2023,3 +2023,214 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-06-26 13:32:13 -0300
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "development" does not exist
+):
+  
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (1407.0ms)[0m  [1m[35mCREATE DATABASE "development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (766.3ms)[0m  [1m[35mCREATE DATABASE "test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (127.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (106.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateEventos (20190612184233)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (103.2ms)[0m  [1m[35mCREATE TABLE "eventos" ("id" bigserial primary key, "nome" character varying, "desc" character varying, "data" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190612184233_create_eventos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190612184233"]]
+  ↳ bin/rails:9
+  [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20190619165552)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (86.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "nome" character varying, "aniversario" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190619165552_devise_create_users.rb:5
+  [1m[35m (32.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190619165552_devise_create_users.rb:41
+  [1m[35m (32.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20190619165552_devise_create_users.rb:42
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190619165552"]]
+  ↳ bin/rails:9
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-26 16:32:34.321394"], ["updated_at", "2019-06-26 16:32:34.321394"]]
+  ↳ bin/rails:9
+  [1m[35m (9.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (0.3ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-26 16:32:34.368400"], ["created_at", "2019-06-26 16:32:34.369037"], ["updated_at", "2019-06-26 16:32:34.369037"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-27 16:32:34.388128"], ["created_at", "2019-06-26 16:32:34.388695"], ["updated_at", "2019-06-26 16:32:34.388695"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-28 16:32:34.399352"], ["created_at", "2019-06-26 16:32:34.400103"], ["updated_at", "2019-06-26 16:32:34.400103"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-29 16:32:34.410448"], ["created_at", "2019-06-26 16:32:34.411264"], ["updated_at", "2019-06-26 16:32:34.411264"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.5ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-06-30 16:32:34.421614"], ["created_at", "2019-06-26 16:32:34.422471"], ["updated_at", "2019-06-26 16:32:34.422471"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.8ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-07-01 16:32:34.432812"], ["created_at", "2019-06-26 16:32:34.433871"], ["updated_at", "2019-06-26 16:32:34.433871"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.8ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-07-02 16:32:34.443982"], ["created_at", "2019-06-26 16:32:34.445054"], ["updated_at", "2019-06-26 16:32:34.445054"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.6ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-07-03 16:32:34.455268"], ["created_at", "2019-06-26 16:32:34.456721"], ["updated_at", "2019-06-26 16:32:34.456721"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.4ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-07-04 16:32:34.465939"], ["created_at", "2019-06-26 16:32:34.466859"], ["updated_at", "2019-06-26 16:32:34.466859"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "eventos" ("nome", "desc", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "aniversario batata"], ["desc", "dia especial"], ["data", "2019-07-05 16:32:34.476660"], ["created_at", "2019-06-26 16:32:34.477203"], ["updated_at", "2019-06-26 16:32:34.477203"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leocampelo16@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "leocampelo16@gmail.com"], ["encrypted_password", "$2a$11$yJCWznTEMIoQPYWmUuzYcuraZta9u4xpjtoJvwv1z2kyUezm7UkzS"], ["nome", "Leonardo Stein"], ["aniversario", "1999-11-25"], ["created_at", "2019-06-26 16:32:34.675746"], ["updated_at", "2019-06-26 16:32:34.675746"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leosnozaki@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "leosnozaki@gmail.com"], ["encrypted_password", "$2a$11$BucusqBb1xyNBHAFxaCwweXgIUpWWYWGMwPzL/N0xEQv9vcwST6JO"], ["nome", "Leonardo Nozaki"], ["aniversario", "1998-02-02"], ["created_at", "2019-06-26 16:32:34.813662"], ["updated_at", "2019-06-26 16:32:34.813662"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (16.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sososilvei@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "sososilvei@hotmail.com"], ["encrypted_password", "$2a$11$qhd4wnrYiFfWWwHJw3eKoufGyI.JYcE4znRDC68BRUvzezVCZAy1C"], ["nome", "Sofia Silveira"], ["aniversario", "1997-08-18"], ["created_at", "2019-06-26 16:32:34.959911"], ["updated_at", "2019-06-26 16:32:34.959911"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (13.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:46
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["encrypted_password", "$2a$11$R6kSa48GkAjtZaLYG27l0.wwzWcewLpW0xOJrn8es0k5qF8DiuxOe"], ["nome", "Lucas Penteado"], ["aniversario", "1996-01-16"], ["created_at", "2019-06-26 16:32:35.102227"], ["updated_at", "2019-06-26 16:32:35.102227"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:46
+Started GET "/" for 127.0.0.1 at 2019-06-26 13:32:49 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/usuario/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 24ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-06-26 13:32:50 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/usuario/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/devise-4.6.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/usuario/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/devise-4.6.2/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered /home/usuario/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/devise-4.6.2/app/views/devise/sessions/new.html.erb within layouts/application (109.4ms)
+Completed 200 OK in 7390ms (Views: 7377.0ms | ActiveRecord: 3.8ms)
+
+
