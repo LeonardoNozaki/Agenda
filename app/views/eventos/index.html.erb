@@ -1,11 +1,72 @@
-<h1><%= @var.length %> eventos registrados</h1>
+<nav class="navbar navbar-dark bg-dark p-1">
+  <div class="d-flex justify-content-between div_nav">
+    <%= image_tag("logo.png", class: "nav_agenda", size: "40x40", alt: "Agenda") =%>
+    <div class="dropdown show">
+      <a class="btn btn-secondary dropdown-toggle div_drop p-1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-<%@var.each do |thing| %>
-  <ul><%= thing.data %></ul>
-<% end %>
+        <div class="nav_name">
+          Euzinha da Sila
+          &nbsp&nbsp
+          <%= image_tag("people.png", class: "nav_people", size: "30x30", alt: "User") =%>
+        </div>
+      </a>
 
-<h1><%= @var1.length %> users registrados</h1>
+      <div class="dropdown-menu dropdown-menu-right">
+        <button class="dropdown-item" type="button">Info</button>
+        <button class="dropdown-item" type="button">Sair</button>
+      </div>
+    </div>
+  </div>
+</nav>
 
-<%@var1.each do |thing| %>
-  <ul><%= thing.nome %></ul>
-<% end %>
+<div class="div_main">
+  <div class="col-12">
+    <h2 style="margin-left: 15px;">
+      28 de Junho de 2019
+    </h2>
+    <br>
+    <div class="col-9">
+      <div class="card">
+        <div class="card-body row col-12">
+          <div class="col-1 card_hora">
+            <div class="num_hora">
+              11:00
+            </div>
+          </div>
+          <div class="col-11" style="padding-right: 0px; text-align: justify;">
+            <div class="card_nome">
+              Aniversário da Sofia
+            </div>
+            <hr>
+            <div class="card_desc">
+              Lembrar de dar os parabéns e muitos doguineos
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur repellendus vero minima hic dolorem similique commodi nesciunt laboriosam soluta illum, beatae autem quas nisi ullam accusamus ea repudiandae distinctio molestias.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body row col-12">
+          <div class="col-1 card_hora">
+            <div class="num_hora">
+              11:00
+            </div>
+          </div>
+          <div class="col-11" style="padding-right: 0px; text-align: justify;">
+            <div class="card_nome">
+              Aniversário da Sofia
+            </div>
+            <hr>
+            <div class="card_desc">
+              Lembrar de dar os parabéns e muitos doguineos
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur repellendus vero minima hic dolorem similique commodi nesciunt laboriosam soluta illum, beatae autem quas nisi ullam accusamus ea repudiandae distinctio molestias.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+
+    </div>
+  </div>
+</div>

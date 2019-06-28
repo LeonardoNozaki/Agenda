@@ -3517,3 +3517,790 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 2340ms (Views: 2336.2ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-06-28 18:21:16 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/usuario/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/usuario/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/devise-4.6.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/usuario/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/devise-4.6.2/app/views/devise/shared/_links.html.erb (2.8ms)
+  Rendered /home/usuario/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/devise-4.6.2/app/views/devise/sessions/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 266ms (Views: 247.7ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-06-28 18:21:18 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yrIucdH2TRJOp3sETEshv+iqnmbalAwzMjf8XH1jNDx+QzOGRs/lbtyKzgKevPMIKi/RqIGbNhlcTmdxsLqHTg==", "user"=>{"email"=>"lucaspsacchi12345@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["LIMIT", 1]]
+  ↳ /home/usuario/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 140ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:21:18 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 45ms (Views: 41.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:27:42 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 5960ms (Views: 5957.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:37:56 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 33.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:39:04 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2427ms (Views: 2423.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:40:54 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 2323ms (Views: 2319.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:42:33 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 2326ms (Views: 2322.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:43:12 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 2387ms (Views: 2383.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:43:47 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:44:06 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:44:50 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:46:24 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:46:47 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:49:41 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:50:02 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:50:06 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:50:14 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:50:15 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:51:51 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:51:56 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:51:57 -0300
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:54:24 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/usuario/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (232.3ms)
+Completed 200 OK in 303ms (Views: 282.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:54:55 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:57:58 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:58:16 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4585ms (Views: 4583.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:58:36 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 2512ms (Views: 2510.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 18:59:49 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 70ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:00:08 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:01:16 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2350ms (Views: 2348.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:01:33 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 2258ms (Views: 2256.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:01:46 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 2241ms (Views: 2240.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:02:21 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:02:30 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:02:41 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:03:29 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:05:46 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:06:02 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:06:14 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:06:22 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:09:01 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 2550ms (Views: 2549.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:09:52 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 2291ms (Views: 2290.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:10:42 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:11:02 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:11:03 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:11:09 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:11:10 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:11:41 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:11:42 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:11:59 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:12:22 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:13:18 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:13:37 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 2369ms (Views: 2368.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:15:18 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:15:38 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:16:54 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:18:08 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 2421ms (Views: 2420.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:18:12 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:18:22 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 2296ms (Views: 2295.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:18:44 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:19:12 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 2547ms (Views: 2545.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:19:31 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 2338ms (Views: 2337.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:19:40 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 2331ms (Views: 2329.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:20:21 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2472ms (Views: 2471.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:21:15 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:22:53 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 2696ms (Views: 2694.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:23:20 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 2453ms (Views: 2451.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:24:24 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 2430ms (Views: 2428.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:25:11 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 2251ms (Views: 2250.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:25:19 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 2386ms (Views: 2384.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:26:23 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 2251ms (Views: 2249.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:26:37 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 2359ms (Views: 2358.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:27:08 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 2551ms (Views: 2549.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:27:26 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 2461ms (Views: 2460.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:27:34 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 2321ms (Views: 2318.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:28:11 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:28:55 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 2593ms (Views: 2591.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:29:23 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2518ms (Views: 2517.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:31:11 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 2332ms (Views: 2330.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:31:28 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2423ms (Views: 2422.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:32:09 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 2440ms (Views: 2439.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:32:55 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2397ms (Views: 2396.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:33:23 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:33:59 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 2481ms (Views: 2480.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:34:47 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 2455ms (Views: 2454.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:35:00 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:36:58 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...kground-color: ": expected expression (e.g. 1px, bold), was "##545b62;"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:50
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2746971044809329872_70204479894740'
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:37:06 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 2614ms (Views: 2613.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:37:30 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2403ms (Views: 2401.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:38:12 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 2319ms (Views: 2317.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:38:28 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 2386ms (Views: 2384.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:39:30 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 2492ms (Views: 2491.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:40:33 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2345ms (Views: 2344.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:40:43 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 2475ms (Views: 2474.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:40:54 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 2273ms (Views: 2272.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:41:42 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  width": expected ";", was ": 100%;"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:55
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2746971044809329872_70204503159940'
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:41:48 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2370ms (Views: 2368.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:42:55 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2259ms (Views: 2257.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:44:03 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 100ms (Views: 97.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:44:41 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:45:04 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 2294ms (Views: 2292.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-28 19:45:11 -0300
+Processing by EventosController#index as HTML
+  Rendering eventos/index.html.erb within layouts/application
+  Rendered eventos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2425ms (Views: 2423.8ms | ActiveRecord: 0.0ms)
+
+
