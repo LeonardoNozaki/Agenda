@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark bg-dark p-1">
   <div class="d-flex justify-content-between div_nav">
-    <%= image_tag("logo.png", class: "nav_agenda", size: "40x40", alt: "Agenda") =%>
+    <a href="/eventos/index"><%= image_tag("logo.png", class: "nav_agenda", size: "40x40", alt: "Agenda") =%></a><!-- ALTERAR A ROTA -->
     <div class="dropdown show">
       <a class="btn btn-secondary dropdown-toggle div_drop p-1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
@@ -20,53 +20,62 @@
 </nav>
 
 <div class="div_main">
-  <div class="col-12">
-    <h2 style="margin-left: 15px;">
+  <center>
+    <a href="eventos/new" class="btn btn-dark btn-custom">
+      Criar evento
+    </a>
+
+  </center>
+  <br>
+  <div class="row d-flex justify-content-between" style="margin-right: 0px; padding-right: 30px;">
+    <h2 style="margin-left: 45px;">
       28 de Junho de 2019
     </h2>
-    <br>
-    <div class="col-9">
-      <div class="card">
-        <div class="card-body row col-12">
-          <div class="col-1 card_hora">
-            <div class="num_hora">
-              11:00
-            </div>
-          </div>
-          <div class="col-11" style="padding-right: 0px; text-align: justify;">
-            <div class="card_nome">
-              Aniversário da Sofia
-            </div>
-            <hr>
-            <div class="card_desc">
-              Lembrar de dar os parabéns e muitos doguineos
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur repellendus vero minima hic dolorem similique commodi nesciunt laboriosam soluta illum, beatae autem quas nisi ullam accusamus ea repudiandae distinctio molestias.
-            </div>
+    <!-- Input -->
+    <form id="form" method="GET" class="form-group">
+      <input id="date" class="date" type="date" value="2017-06-01"><!-- COLOCAR O DIA ATUAL NO VALUE -->
+    </form>
+  </div>
+  <div class="col-12" style="padding-right: 30px; padding-left: 30px;">
+    <div class="card shadow-sm">
+      <div class="card-body row col-12">
+        <div class="col-1 card_hora">
+          <div class="num_hora">
+            11:00
           </div>
         </div>
-      </div>
-      <div class="card">
-        <div class="card-body row col-12">
-          <div class="col-1 card_hora">
-            <div class="num_hora">
-              11:00
-            </div>
+        <div class="col-11" style="padding-right: 0px; text-align: justify;">
+          <div class="card_nome">
+            Aniversário da Sofia
           </div>
-          <div class="col-11" style="padding-right: 0px; text-align: justify;">
-            <div class="card_nome">
-              Aniversário da Sofia
-            </div>
-            <hr>
-            <div class="card_desc">
-              Lembrar de dar os parabéns e muitos doguineos
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur repellendus vero minima hic dolorem similique commodi nesciunt laboriosam soluta illum, beatae autem quas nisi ullam accusamus ea repudiandae distinctio molestias.
-            </div>
+          <hr>
+          <div class="card_desc">
+            Lembrar de dar os parabéns e muitos doguineos
           </div>
         </div>
       </div>
     </div>
-    <div class="col-3">
-
+    <div class="card shadow-sm">
+      <div class="card-body row col-12">
+        <div class="col-1 card_hora">
+          <div class="num_hora">
+            11:00
+          </div>
+        </div>
+        <div class="col-11" style="padding-right: 0px; text-align: justify;">
+          <div class="card_nome">
+            Aniversário da Sofia
+          </div>
+          <hr>
+          <div class="card_desc">
+            Lembrar de dar os parabéns e muitos doguineos
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<script>
+
+</script>

@@ -1,2 +1,53 @@
-<h1>Eventos#new</h1>
-<p>Find me in app/views/eventos/new.html.erb</p>
+<nav class="navbar navbar-dark bg-dark p-1">
+  <div class="d-flex justify-content-between div_nav">
+    <a href="/eventos/index"><%= image_tag("logo.png", class: "nav_agenda", size: "40x40", alt: "Agenda") =%></a><!-- ALTERAR A ROTA -->
+    <div class="dropdown show">
+      <a class="btn btn-secondary dropdown-toggle div_drop p-1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+        <div class="nav_name">
+          Euzinha da Sila
+          &nbsp&nbsp
+          <%= image_tag("people.png", class: "nav_people", size: "30x30", alt: "User") =%>
+        </div>
+      </a>
+
+      <div class="dropdown-menu dropdown-menu-right">
+        <button class="dropdown-item" type="button">Info</button>
+        <button class="dropdown-item" type="button">Sair</button>
+      </div>
+    </div>
+  </div>
+</nav>
+<br>
+<center>
+  <h2>Criar evento</h2>
+</center>
+<br>
+
+<div class="col-12 row">
+  <div class="col-4"></div>
+  <div class="col-4">
+    <div class="card card_salvar shadow">
+      <form class="">
+        <div class="form-group">
+          <label for="nome">Nome evento</label>
+          <input type="text" class="form-control" placeholder="">
+        </div>
+        <div class="form-group">
+          <label for="data">Data</label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="hora">Hora</label>
+          <input type="time" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="desc">Descrição</label>
+          <input type="textarea" rows="3" class="form-control" placeholder="">
+        </div>
+        <button type="submit" class="btn btn-success btn_salvar">Salvar</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-4"></div>
+</div>
