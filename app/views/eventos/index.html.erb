@@ -13,7 +13,8 @@
 
       <div class="dropdown-menu dropdown-menu-right">
         <button class="dropdown-item" type="button">Info</button>
-        <button class="dropdown-item" type="button">Sair</button>
+        <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: 'dropdown-item', type: 'button' %>
+        <!-- <button class="dropdown-item" type="button">Sair</button> -->
       </div>
     </div>
   </div>
@@ -38,17 +39,24 @@
   </div>
   <div class="col-12" style="padding-right: 30px; padding-left: 30px;">
     <div class="card shadow-sm">
-      <div class="card-body row col-12">
+      <div class="card-body row col-12 card_dir">
         <div class="col-1 card_hora">
           <div class="num_hora">
             11:00
           </div>
         </div>
         <div class="col-11" style="padding-right: 0px; text-align: justify;">
-          <div class="card_nome">
-            Aniversário da Sofia
+          <div class="col-12 row card_dir">
+            <div class="col-11 card_esq">
+              <div class="card_nome">
+                Aniversário da Sofia
+              </div>
+            </div>
+            <div class="col-1 d-flex justify-content-end card_dir">
+              <button class="btn btn-secondary btn_x">X</button><!-- Aquele link_to -->
+            </div>
           </div>
-          <hr>
+          <hr class="hr_custom">
           <div class="card_desc">
             Lembrar de dar os parabéns e muitos doguineos
           </div>
@@ -56,17 +64,24 @@
       </div>
     </div>
     <div class="card shadow-sm">
-      <div class="card-body row col-12">
+      <div class="card-body row col-12 card_dir">
         <div class="col-1 card_hora">
           <div class="num_hora">
             11:00
           </div>
         </div>
         <div class="col-11" style="padding-right: 0px; text-align: justify;">
-          <div class="card_nome">
-            Aniversário da Sofia
+          <div class="col-12 row card_dir">
+            <div class="col-11 card_esq">
+              <div class="card_nome">
+                Aniversário da Sofia
+              </div>
+            </div>
+            <div class="col-1 d-flex justify-content-end card_dir">
+              <button class="btn btn-secondary btn_x">X</button>
+            </div>
           </div>
-          <hr>
+          <hr class="hr_custom">
           <div class="card_desc">
             Lembrar de dar os parabéns e muitos doguineos
           </div>

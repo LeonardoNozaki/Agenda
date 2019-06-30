@@ -1,18 +1,27 @@
-<h2>Forgot your password?</h2>
+<div class="col-12 row d-flex justify-content-center" style="margin-top: 5rem;">
+  <div class="card card_salvar shadow">
+    <center>
+      <h2 style="margin-bottom: 20px; padding-top: 0px;">Esqueceu sua senha?</h2>
+    </center>
+    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= f.error_notification %>
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
+      <div class="form-group">
+        <div class="form-inline">
+          <%= f.input :email,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "email", class: "form-control form-custom" } %>
+        </div>
+      </div>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
+      <div class="form-actions">
+        <%= f.button :submit, "Trocar a senha", class: 'btn btn-success btn_salvar' %><!--Send me reset password instructions  -->
+      </div>
+    <% end %>
+    <hr class="hr_login" style="margin-top: 15px;">
+    <center>
+    <%= render "devise/shared/links" %>
+    </center>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

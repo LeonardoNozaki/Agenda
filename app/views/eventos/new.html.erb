@@ -13,21 +13,17 @@
 
       <div class="dropdown-menu dropdown-menu-right">
         <button class="dropdown-item" type="button">Info</button>
-        <button class="dropdown-item" type="button">Sair</button>
+        <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: 'dropdown-item', type: 'button' %>
+        <!-- <button class="dropdown-item" type="button">Sair</button> -->
       </div>
     </div>
   </div>
 </nav>
-<br>
-<center>
-  <h2>Criar evento</h2>
-</center>
-<br>
+<br><br>
 
-<div class="col-12 row">
-  <div class="col-4"></div>
-  <div class="col-4">
+<div class="col-12 row d-flex justify-content-center">
     <div class="card card_salvar shadow">
+      <center><h2 style="margin-bottom: 20px; padding-top: 0px;">Criar evento</h2></center>
       <form class="">
         <div class="form-group">
           <label for="nome">Nome evento</label>
@@ -48,6 +44,4 @@
         <button type="submit" class="btn btn-success btn_salvar">Salvar</button>
       </form>
     </div>
-  </div>
-  <div class="col-4"></div>
 </div>

@@ -36,7 +36,7 @@ nav, .div_main {
 }
 
 .card_nome {
-  padding-top: 10px;
+  padding-top: 5px;
   font-weight: bold;
   font-size: 22px;
 }
@@ -85,5 +85,46 @@ nav, .div_main {
 }
 
 .card_salvar {
-  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.card_dir {
+  padding-right: 0px;
+}
+
+.card_esq {
+  padding-left: 0px;
+}
+
+.btn_x {
+  padding: 0.2rem 0.7rem;
+  margin-top: 10px;
+}
+
+.hr_custom {
+  margin: 0.7rem 0;
+}
+
+.hr_login {
+  margin: 0.2rem 0;
+}
+
+.form-custom {
+  margin-bottom: 15px;
+}
+
+.form-inline > .user_email{
+  width: 100% !important;
+}
+
+.form-inline .form-control {
+  width: 100% !important;
+}
+
+.form-inline > .input > label {
+  display: flex;
+  flex-direction: row-reverse;
 }
