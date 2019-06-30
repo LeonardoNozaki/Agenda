@@ -1,2 +1,13 @@
-<h1>Eventos#new</h1>
+<h1>Eventos aaa new</h1>
 <p>Find me in app/views/eventos/new.html.erb</p>
+
+
+<form action="/eventos/create_evento" method="POST">
+  <!-- Essa linha é necessária para autenticar nosso formulário -->
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="nome">
+  <input type="text" name="desc">
+  <input type="datetime-local" name="data">
+  <input type="submit">
+</form>
+
