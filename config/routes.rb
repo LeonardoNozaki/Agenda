@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   #post 'eventos/find'
   #get 'eventos/delete'
   #get '/info', to: 'pages#info'
-  #root to: 'pages#home'
+  root to: 'eventos#index'
 
   #resources :eventos
 
@@ -19,6 +19,6 @@ Rails.application.routes.draw do
   get 'create', to: 'eventos#create'
   get 'delete', to:'eventos#delete'
   get 'info', to: 'pages#info'
-  root to: 'eventos#index'
+  #root to: 'eventos#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
