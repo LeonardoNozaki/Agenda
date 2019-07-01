@@ -4,11 +4,6 @@
     <div class="dropdown show">
       <a class="btn btn-secondary dropdown-toggle div_drop p-1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-<%@var.each do |thing| %>
-  <ul><%= thing.nome %></ul>
-  <%= link_to 'deletado', eventos_delete_path(id: thing.id), method: :get %>
-<% end %>
-
         <div class="nav_name">
           Euzinha da Sila
           &nbsp&nbsp
@@ -96,5 +91,4 @@
 </div>
 
 <script>
-
 </script>
