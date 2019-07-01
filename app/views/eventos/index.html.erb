@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark bg-dark p-1">
   <div class="d-flex justify-content-between div_nav">
-    <a href="/eventos/index"><%= image_tag("logo.png", class: "nav_agenda", size: "40x40", alt: "Agenda") =%></a><!-- ALTERAR A ROTA -->
+    <a href="index"><%= image_tag("logo.png", class: "nav_agenda", size: "40x40", alt: "Agenda") =%></a><!-- ALTERAR A ROTA -->
     <div class="dropdown show">
       <a class="btn btn-secondary dropdown-toggle div_drop p-1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
@@ -12,10 +12,8 @@
       </a>
 
       <div class="dropdown-menu dropdown-menu-right">
-        <button class="dropdown-item" type="button">Info</button>
-        <%= link_to ''  %>
+        <%= link_to 'Info', info_path, class: 'dropdown-item', type: 'button' %>
         <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: 'dropdown-item', type: 'button' %>
-        <!-- <button class="dropdown-item" type="button">Sair</button> -->
       </div>
     </div>
   </div>
@@ -23,7 +21,7 @@
 
 <div class="div_main">
   <center>
-    <a href="eventos/new" class="btn btn-dark btn-custom">
+    <a href="new" class="btn btn-dark btn-custom">
       Criar evento
     </a>
 
