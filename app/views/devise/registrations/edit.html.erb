@@ -15,10 +15,12 @@
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
+                label: 'Senha',
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :current_password,
                 hint: "we need your current password to confirm your changes",
+                label: 'Confirmar senha',
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
   </div>

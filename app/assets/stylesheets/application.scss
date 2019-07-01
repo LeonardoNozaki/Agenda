@@ -127,4 +127,32 @@ nav, .div_main {
 .form-inline > .input > label {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: start;
+  margin-bottom: 0.5rem;
+}
+
+.form-inline > .input {
+  width: 100%;
+}
+
+.checkbox > input {
+  margin-right: 5px;
+}
+
+.checkbox {
+  margin-top: 5px;
+}
+
+.user_aniversario {
+  width: 100%;
+  margin-left: 0px;
+  margin-bottom: 50px;
+}
+
+.user_aniversario label, .user_aniversario input {
+  margin-left: 0px;
+}
+
+.date > label {
+  height: 24px;
 }

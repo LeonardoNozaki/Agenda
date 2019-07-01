@@ -13,6 +13,7 @@
         </div>
         <div class="form-inline">
           <%= f.input :password,
+                      label: 'Senha',
                       required: false,
                       input_html: { autocomplete: "current-password", class: "form-control form-custom" } %>
         </div>
@@ -21,9 +22,9 @@
       <div class="form-actions">
         <%= f.button :submit, "Entrar", class: 'btn btn-success btn_salvar' %>
       </div>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      <%= f.input :remember_me, as: :boolean, label: 'Lembrar usuário' if devise_mapping.rememberable? %>
     <% end %>
-    <hr class="hr_login">
+    <hr class="hr_login" style="margin-bottom: 15px;">
     <center>
     <%= render "devise/shared/links" %>
     </center>
