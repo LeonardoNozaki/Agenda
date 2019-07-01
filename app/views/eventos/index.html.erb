@@ -1,29 +1,100 @@
-<h1><%= @var.length %> eventos registrados</h1>
+<nav class="navbar navbar-dark bg-dark p-1">
+  <div class="d-flex justify-content-between div_nav">
+    <a href="index"><%= image_tag("logo.png", class: "nav_agenda", size: "40x40", alt: "Agenda") =%></a><!-- ALTERAR A ROTA -->
+    <div class="dropdown show">
+      <a class="btn btn-secondary dropdown-toggle div_drop p-1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
 <%@var.each do |thing| %>
   <ul><%= thing.nome %></ul>
   <%= link_to 'deletado', eventos_delete_path(id: thing.id), method: :get %>
-
 <% end %>
 
-<h1><%= @var1.length %> users registrados</h1>
+        <div class="nav_name">
+          Euzinha da Sila
+          &nbsp&nbsp
+          <%= image_tag("people.png", class: "nav_people", size: "30x30", alt: "User") =%>
+        </div>
+      </a>
 
-<%@var1.each do |thing| %>
-  <ul><%= thing.nome %></ul>
-<% end %>
+      <div class="dropdown-menu dropdown-menu-right">
+        <%= link_to 'Info', info_path, class: 'dropdown-item', type: 'button' %>
+        <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: 'dropdown-item', type: 'button' %>
+      </div>
+    </div>
+  </div>
+</nav>
 
+<div class="div_main">
+  <center>
+    <a href="new" class="btn btn-dark btn-custom">
+      Criar evento
+    </a>
 
-<%= link_to 'Criar evento', eventos_new_path %>
+  </center>
+  <br>
+  <div class="row d-flex justify-content-between" style="margin-right: 0px; padding-right: 30px;">
+    <h2 style="margin-left: 45px;">
+      28 de Junho de 2019
+    </h2>
+    <!-- Input -->
+    <form id="form" method="GET" class="form-group">
+      <input id="date" class="date" type="date" value="2017-06-01"><!-- COLOCAR O DIA ATUAL NO VALUE -->
+    </form>
+  </div>
+  <div class="col-12" style="padding-right: 30px; padding-left: 30px;">
+    <div class="card shadow-sm">
+      <div class="card-body row col-12 card_dir">
+        <div class="col-1 card_hora">
+          <div class="num_hora">
+            11:00
+          </div>
+        </div>
+        <div class="col-11" style="padding-right: 0px; text-align: justify;">
+          <div class="col-12 row card_dir">
+            <div class="col-11 card_esq">
+              <div class="card_nome">
+                Aniversário da Sofia
+              </div>
+            </div>
+            <div class="col-1 d-flex justify-content-end card_dir">
+              <button class="btn btn-secondary btn_x">X</button><!-- Aquele link_to -->
+            </div>
+          </div>
+          <hr class="hr_custom">
+          <div class="card_desc">
+            Lembrar de dar os parabéns e muitos doguineos
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card shadow-sm">
+      <div class="card-body row col-12 card_dir">
+        <div class="col-1 card_hora">
+          <div class="num_hora">
+            11:00
+          </div>
+        </div>
+        <div class="col-11" style="padding-right: 0px; text-align: justify;">
+          <div class="col-12 row card_dir">
+            <div class="col-11 card_esq">
+              <div class="card_nome">
+                Aniversário da Sofia
+              </div>
+            </div>
+            <div class="col-1 d-flex justify-content-end card_dir">
+              <button class="btn btn-secondary btn_x">X</button>
+            </div>
+          </div>
+          <hr class="hr_custom">
+          <div class="card_desc">
+            Lembrar de dar os parabéns e muitos doguineos
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<form action="/eventos/find" method="POST">
-  <!-- Essa linha é necessária para autenticar nosso formulário -->
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <input type="date" name="data">
-  <input type="submit">
-</form>
+<script>
 
-
-
-
-
-
+</script>
