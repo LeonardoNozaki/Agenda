@@ -1,23 +1,69 @@
-<h1><%= @var.length %> eventos registrados</h1>
+<nav class="navbar navbar-dark bg-dark p-1">
+  <div class="d-flex justify-content-between div_nav">
+    <a href="index"><%= image_tag("logo.png", class: "nav_agenda", size: "40x40", alt: "Agenda") %></a>
+    <div class="dropdown show">
+      <a class="btn btn-secondary dropdown-toggle div_drop p-1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-<%@var.each do |thing| %>
-  <ul><%= thing.nome %></ul>
-  <%= link_to 'deletado', eventos_delete_path(id: thing.id), method: :get %>
+        <div class="nav_name"><%= @user.nome%>
+          &nbsp&nbsp
+          <%= image_tag("people.png", class: "nav_people", size: "30x30", alt: "User") =%>
+        </div>
+      </a>
 
-<% end %>
+      <div class="dropdown-menu dropdown-menu-right">
+        <%= link_to 'Info', info_path, class: 'dropdown-item', type: 'button' %>
+        <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: 'dropdown-item', type: 'button' %>
+      </div>
+    </div>
+  </div>
+</nav>
 
-<h1><%= @var1.length %> users registrados</h1>
+<div class="div_main">
+  <center>
+    <a href="new" class="btn btn-dark btn-custom">
+      Criar evento
+    </a>
 
-<%@var1.each do |thing| %>
-  <ul><%= thing.nome %></ul>
-<% end %>
+  </center>
+  <br>
+  <div class="row d-flex justify-content-between" style="margin-right: 0px; padding-right: 30px;">
+    <h2 style="margin-left: 45px;"><%=@d.strftime('%a, %d %b of %Y') %></h2>
+    <!-- Input -->
+    <form id="form" action="find" method="POST" class="form-group">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <input name="data" id="date" class="date" type="date" value=<%=@d%>>
+      <button type="submit" class="btn btn-success btn_salvar">Buscar</button>
+    </form>
+  </div>
 
+  <div class="col-12" style="padding-right: 30px; padding-left: 30px;">
+    <% if @eventos.size == 0 %>
+        <p>Sem eventos em <%=@d.strftime('%d/%m/%Y') %></p>
+      <% else
+       @eventos.each do |evento| %>
+      <div class="card shadow-sm">
+        <div class="card-body row col-12 card_dir">
+          <div class="col-1 card_hora">
+            <div class="num_hora"><%= ActiveSupport::TimeZone["UTC"].parse(evento.data.to_s).utc.to_time.strftime("%H:%M") %></div>
+          </div>
+          <div class="col-11" style="padding-right: 0px; text-align: justify;">
+            <div class="col-12 row card_dir">
+              <div class="col-11 card_esq">
+                <div class="card_nome"><%= evento.nome %></div>
+              </div>
+              <div class="col-1 d-flex justify-content-end card_dir">
+                <%= link_to "<button class=\"btn btn-secondary btn_x\">Excluir</button>".html_safe, eventos_delete_path(id: evento.id)%>
+              </div>
+            </div>
+            <hr class="hr_custom">
+            <div class="card_desc"><%= evento.desc %></div>
+          </div>
+        </div>
+      </div>
+    <% end
+      end %>
+  </div>
+</div>
 
-<%= link_to 'Criar evento', eventos_new_path %>
-
-<form action="/eventos/find" method="POST">
-  <!-- Essa linha é necessária para autenticar nosso formulário -->
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <input type="date" name="data">
-  <input type="submit">
-</form>
+<script>
+</script>

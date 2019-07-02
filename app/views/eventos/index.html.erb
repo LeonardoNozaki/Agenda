@@ -1,11 +1,10 @@
 <nav class="navbar navbar-dark bg-dark p-1">
   <div class="d-flex justify-content-between div_nav">
-    <a href="index"><%= image_tag("logo.png", class: "nav_agenda", size: "40x40", alt: "Agenda") =%></a><!-- ALTERAR A ROTA -->
+    <a href="index"><%= image_tag("logo.png", class: "nav_agenda", size: "40x40", alt: "Agenda") %></a>
     <div class="dropdown show">
       <a class="btn btn-secondary dropdown-toggle div_drop p-1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-        <div class="nav_name">
-          Euzinha da Sila
+        <div class="nav_name"><%= @user.nome%>
           &nbsp&nbsp
           <%= image_tag("people.png", class: "nav_people", size: "30x30", alt: "User") =%>
         </div>
@@ -28,65 +27,41 @@
   </center>
   <br>
   <div class="row d-flex justify-content-between" style="margin-right: 0px; padding-right: 30px;">
-    <h2 style="margin-left: 45px;">
-      28 de Junho de 2019
-    </h2>
+    <h2 style="margin-left: 45px;"><%=@d.strftime('%a, %d %b of %Y') %></h2>
     <!-- Input -->
-    <form id="form" method="GET" class="form-group">
-      <input id="date" class="date" type="date" value="2017-06-01"><!-- COLOCAR O DIA ATUAL NO VALUE -->
+    <form id="form" action="find" method="POST" class="form-group">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <input name="data" id="date" class="date" type="date" value=<%=@d%>>
+      <button type="submit" class="btn btn-success btn_salvar">Buscar</button>
     </form>
   </div>
+
   <div class="col-12" style="padding-right: 30px; padding-left: 30px;">
-    <div class="card shadow-sm">
-      <div class="card-body row col-12 card_dir">
-        <div class="col-1 card_hora">
-          <div class="num_hora">
-            11:00
+    <% if @eventos.size == 0 %>
+        <p>Sem eventos em <%=@d.strftime('%d/%m/%Y') %></p>
+      <% else
+        @eventos.each do |evento| %>
+      <div class="card shadow-sm">
+        <div class="card-body row col-12 card_dir">
+          <div class="col-1 card_hora">
+            <div class="num_hora"><%= ActiveSupport::TimeZone["UTC"].parse(evento.data.to_s).utc.to_time.strftime("%H:%M") %></div>
           </div>
-        </div>
-        <div class="col-11" style="padding-right: 0px; text-align: justify;">
-          <div class="col-12 row card_dir">
-            <div class="col-11 card_esq">
-              <div class="card_nome">
-                Aniversário da Sofia
+          <div class="col-11" style="padding-right: 0px; text-align: justify;">
+            <div class="col-12 row card_dir">
+              <div class="col-11 card_esq">
+                <div class="card_nome"><%= evento.nome %></div>
+              </div>
+              <div class="col-1 d-flex justify-content-end card_dir">
+                <%= link_to "<button class=\"btn btn-secondary btn_x\">Excluir</button>".html_safe, eventos_delete_path(id: evento.id)%>
               </div>
             </div>
-            <div class="col-1 d-flex justify-content-end card_dir">
-              <button class="btn btn-secondary btn_x">X</button><!-- Aquele link_to -->
-            </div>
-          </div>
-          <hr class="hr_custom">
-          <div class="card_desc">
-            Lembrar de dar os parabéns e muitos doguineos
+            <hr class="hr_custom">
+            <div class="card_desc"><%= evento.desc %></div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="card shadow-sm">
-      <div class="card-body row col-12 card_dir">
-        <div class="col-1 card_hora">
-          <div class="num_hora">
-            11:00
-          </div>
-        </div>
-        <div class="col-11" style="padding-right: 0px; text-align: justify;">
-          <div class="col-12 row card_dir">
-            <div class="col-11 card_esq">
-              <div class="card_nome">
-                Aniversário da Sofia
-              </div>
-            </div>
-            <div class="col-1 d-flex justify-content-end card_dir">
-              <button class="btn btn-secondary btn_x">X</button>
-            </div>
-          </div>
-          <hr class="hr_custom">
-          <div class="card_desc">
-            Lembrar de dar os parabéns e muitos doguineos
-          </div>
-        </div>
-      </div>
-    </div>
+    <% end
+        end %>
   </div>
 </div>
 

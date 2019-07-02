@@ -1,11 +1,10 @@
 <nav class="navbar navbar-dark bg-dark p-1">
   <div class="d-flex justify-content-between div_nav">
-    <a href="index"><%= image_tag("logo.png", class: "nav_agenda", size: "40x40", alt: "Agenda") =%></a><!-- ALTERAR A ROTA -->
+    <a href="index"><%= image_tag("logo.png", class: "nav_agenda", size: "40x40", alt: "Agenda") %></a>
     <div class="dropdown show">
       <a class="btn btn-secondary dropdown-toggle div_drop p-1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-        <div class="nav_name">
-          Euzinha da Sila
+        <div class="nav_name"><%= @user.nome%>
           &nbsp&nbsp
           <%= image_tag("people.png", class: "nav_people", size: "30x30", alt: "User") =%>
         </div>
@@ -27,19 +26,19 @@
     <div class="info_nome">
       <strong><label>Nome completo</label></strong>
       <br>
-      <label>Euzinha da Sila</label>
+      <label><%= @user.nome%></label>
     </div>
     <hr style="margin: 10px 0px;">
     <div class="info_aniversario">
       <strong><label>Aniversário</label></strong>
       <br>
-      <label>1/1/2000</label>
+      <label><%=@user.aniversario.strftime('%d %b of %Y') %></label>
     </div>
     <hr style="margin: 10px 0px;">
     <div class="info_email">
       <strong><label>Email</label></strong>
       <br>
-      <label>email@email.com</label>
+      <label><%= @user.email %></label>
     </div>
   </div>
 </div>

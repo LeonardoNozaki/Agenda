@@ -17327,3 +17327,193 @@ ActionView::Template::Error (undefined method `eventos_delete_path' for #<#<Clas
   
 app/views/eventos/index.html.erb:9:in `block in _app_views_eventos_index_html_erb__2343919621180884163_69843978184240'
 app/views/eventos/index.html.erb:7:in `_app_views_eventos_index_html_erb__2343919621180884163_69843978184240'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (15.8ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (28.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (0.8ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leocampelo16@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (23.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "leocampelo16@gmail.com"], ["encrypted_password", "$2a$11$UjChyEbz9...P/Cklyraz.LEx5z8nBnax4v68wyV.nxqwUYgZt6wy"], ["nome", "Leonardo Stein"], ["aniversario", "1999-11-25"], ["created_at", "2019-07-02 00:35:12.856200"], ["updated_at", "2019-07-02 00:35:12.856200"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (21.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leosnozaki@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "leosnozaki@gmail.com"], ["encrypted_password", "$2a$11$hQsji8Bix14tup.Jw0iqnO/f.yVcwm39InXzbhjpfcwH0V4E5jV5y"], ["nome", "Leonardo Nozaki"], ["aniversario", "1998-02-02"], ["created_at", "2019-07-02 00:35:13.145863"], ["updated_at", "2019-07-02 00:35:13.145863"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (10.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sososilvei@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "sososilvei@hotmail.com"], ["encrypted_password", "$2a$11$fgT9fhbwFCVK0Xce9natjemPCq2453dOpn41lurLx8h8TmTXP/Lky"], ["nome", "Sofia Silveira"], ["aniversario", "1997-08-18"], ["created_at", "2019-07-02 00:35:13.387333"], ["updated_at", "2019-07-02 00:35:13.387333"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["encrypted_password", "$2a$11$vAawSgFI.rcwzAKsaGZozOXR.Y7LQaXKFTsVB1KVNbotSmvSlA9aG"], ["nome", "Lucas Penteado"], ["aniversario", "1996-01-16"], ["created_at", "2019-07-02 00:35:13.624700"], ["updated_at", "2019-07-02 00:35:13.624700"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (43.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (1.5ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (13.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (5.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leocampelo16@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "leocampelo16@gmail.com"], ["encrypted_password", "$2a$11$aQw9eSsZpUTyzo/hNaAsNOpsAC29.2RzdqiKYVyvmIo3Ctcu/9B.W"], ["nome", "Leonardo Stein"], ["aniversario", "1999-11-25"], ["created_at", "2019-07-02 00:36:21.543921"], ["updated_at", "2019-07-02 00:36:21.543921"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leosnozaki@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "leosnozaki@gmail.com"], ["encrypted_password", "$2a$11$w8kwJqrjd1eH9eoty5/jquxhRfJL.GREui.Wkvl2.xg8HeMC1/JEO"], ["nome", "Leonardo Nozaki"], ["aniversario", "1998-02-02"], ["created_at", "2019-07-02 00:36:21.785250"], ["updated_at", "2019-07-02 00:36:21.785250"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sososilvei@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "sososilvei@hotmail.com"], ["encrypted_password", "$2a$11$rcGSPEoNHQb/NJfoCtuVGuqko/t5sfWwIdJZj6IBdYnaobwzf3Z7C"], ["nome", "Sofia Silveira"], ["aniversario", "1997-08-18"], ["created_at", "2019-07-02 00:36:22.040206"], ["updated_at", "2019-07-02 00:36:22.040206"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (12.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (3.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["encrypted_password", "$2a$11$CwJHzXYDrPrB4eCDZRzv/elACko0jWyYmknFRx/aHQ5RhnhlDBTHu"], ["nome", "Lucas Penteado"], ["aniversario", "1996-01-16"], ["created_at", "2019-07-02 00:36:22.317582"], ["updated_at", "2019-07-02 00:36:22.317582"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (2.9ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (35.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leocampelo16@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "leocampelo16@gmail.com"], ["encrypted_password", "$2a$11$pG/MDxFa8dgO5bPcJlIgNeoRqBY56RHMexqKGbq82XMH6Gpn0CyDy"], ["nome", "Leonardo Stein"], ["aniversario", "1999-11-25"], ["created_at", "2019-07-02 00:37:03.551398"], ["updated_at", "2019-07-02 00:37:03.551398"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (10.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leosnozaki@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "leosnozaki@gmail.com"], ["encrypted_password", "$2a$11$9Vc1TieEHJpfpd1L3bOTJOx9CtrzcV5vWBNngtQE3lB9qFHCnb/ey"], ["nome", "Leonardo Nozaki"], ["aniversario", "1998-02-02"], ["created_at", "2019-07-02 00:37:03.793956"], ["updated_at", "2019-07-02 00:37:03.793956"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (12.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sososilvei@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "sososilvei@hotmail.com"], ["encrypted_password", "$2a$11$40Hq3eVlrOMGi.nX3pcx/O8YN8TBw7x0JTndp1Z9XI.wSh4kbe85e"], ["nome", "Sofia Silveira"], ["aniversario", "1997-08-18"], ["created_at", "2019-07-02 00:37:04.041082"], ["updated_at", "2019-07-02 00:37:04.041082"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["encrypted_password", "$2a$11$yCM01Enpi5t.84K.MxWCc.3I2M.1IVb5es6QNEp3jOYLZaIY5ITka"], ["nome", "Lucas Penteado"], ["aniversario", "1996-01-16"], ["created_at", "2019-07-02 00:37:04.293349"], ["updated_at", "2019-07-02 00:37:04.293349"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (1.3ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (36.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mEvento Destroy (1.0ms)[0m  [1m[31mDELETE FROM "eventos"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@gmail.com"], ["encrypted_password", "$2a$11$KEl5RLEXymxhi/.RO6NLMeXbtK08XSsMXsx48jtmuduWNtiNiN4om"], ["nome", "Nome admin"], ["aniversario", "1989-07-05"], ["created_at", "2019-07-02 00:38:09.050502"], ["updated_at", "2019-07-02 00:38:09.050502"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leocampelo16@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "leocampelo16@gmail.com"], ["encrypted_password", "$2a$11$lp9lewDjzt2uk5Wp7OUTKO5MxKgzL6IHmyQm2pGamLFAZJKH49X4a"], ["nome", "Leonardo Stein"], ["aniversario", "1999-11-25"], ["created_at", "2019-07-02 00:38:09.307314"], ["updated_at", "2019-07-02 00:38:09.307314"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (17.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leosnozaki@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "leosnozaki@gmail.com"], ["encrypted_password", "$2a$11$5W94ptaxLf3bRSOT271IGufmoCRDFo9uVY8awwV9AzDqdDBfXfqR2"], ["nome", "Leonardo Nozaki"], ["aniversario", "1998-02-02"], ["created_at", "2019-07-02 00:38:09.559173"], ["updated_at", "2019-07-02 00:38:09.559173"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (10.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sososilvei@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "sososilvei@hotmail.com"], ["encrypted_password", "$2a$11$h8SVaWLYudLzfyr/XDu0Du1yni3ZtiJzZaorEp2jiD0jNL0vJNaKu"], ["nome", "Sofia Silveira"], ["aniversario", "1997-08-18"], ["created_at", "2019-07-02 00:38:09.811925"], ["updated_at", "2019-07-02 00:38:09.811925"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (13.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "aniversario", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "lucaspsacchi12345@hotmail.com"], ["encrypted_password", "$2a$11$tDC/VzQyXCAqhUjDVSKoZO7OT9E7ERcLopxS1td/hdA5rd6uO//Dm"], ["nome", "Lucas Penteado"], ["aniversario", "1996-01-16"], ["created_at", "2019-07-02 00:38:10.062446"], ["updated_at", "2019-07-02 00:38:10.062446"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
