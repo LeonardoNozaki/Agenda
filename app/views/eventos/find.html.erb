@@ -29,10 +29,12 @@
   <div class="row d-flex justify-content-between" style="margin-right: 0px; padding-right: 30px;">
     <h2 style="margin-left: 45px;"><%=@d.strftime('%a, %d %b of %Y') %></h2>
     <!-- Input -->
-    <form id="form" action="find" method="POST" class="form-group">
+    <form id="form" action="find" method="POST" class="form-inline">
       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-      <input name="data" id="date" class="date" type="date" value=<%=@d%>>
-      <button type="submit" class="btn btn-success btn_salvar">Buscar</button>
+      <div class="form-group mx-sm-3 mb-2">
+        <input name="data" id="date" class="date" type="date" value=<%=@d%>>
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">Buscar</button>
     </form>
   </div>
 
